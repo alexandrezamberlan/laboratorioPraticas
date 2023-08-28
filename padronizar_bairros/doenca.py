@@ -1,10 +1,10 @@
 class Doenca:
-    cid = 0
+    cid = ""
     descricao = ""
     cidade = ""
     bairro = ""
-    quantidade_casos = 0
-    porcentagem = 0
+    quantidade_casos = ""
+    porcentagem = ""
     bairro_tratado = ""
 
     def __init__(self, cid, descricao, cidade, bairro, quantidade, porcentagem):
