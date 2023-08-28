@@ -1,0 +1,8 @@
+venv
+.DS_Store
+*.pyc
+.env
+.vscode
+.idea
+*.exe
+obj
