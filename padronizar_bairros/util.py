@@ -1,26 +1,27 @@
-from doenca import Doenca
+from disease import Disease
 
 class Util:
     @staticmethod
-    def exibir_lista(doencas):
+    def list_show(diseases):
         i = 0
-        for item in doencas:
+        for item in diseases:
             print(item)
             i += 1
-        print("\nTotal de registros: ", i)
+        print("\nTotal records: ", i-1)
 
     @staticmethod
-    def ler_arquivo_popular_lista(doencas):
+    def list_read_file(diseases, file_name):
         try:
-            nome_arquivo = "dengue_julho.csv"
-            print(nome_arquivo)
-            leitor = open(nome_arquivo, "r", encoding='utf8')
+            print(file_name)
+            reader = open(file_name, "r", encoding='utf8')            
             
-            for linha in leitor:
-                vetor_linha = linha.split(";")
-                doencas.append(Doenca(vetor_linha[0], vetor_linha[1], vetor_linha[2], vetor_linha[3], vetor_linha[4], vetor_linha[5]))                
+            for line in reader:
+                if (";" in line):
+                    vector_line = line.split(";")
+                    if (len(vector_line) == 6 and vector_line[0] != ""):
+                        diseases.append(Disease(vector_line[0], vector_line[1], vector_line[2], vector_line[3], vector_line[4], vector_line[5]))                
             
-            leitor.close()
+            reader.close()
         except:
-            print("Problema de leitura..\n")
+            print("Reading problems..\n")
             
