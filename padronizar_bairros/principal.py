@@ -7,12 +7,15 @@ os.system("cls")
 
 neighborhoods = []
 Neighborhood.list_read_file(neighborhoods)
-for nb in neighborhoods:
-    for i in nb.vector_line:
-        print(i)
+# for nb in neighborhoods:
+#     for i in nb.vector_line:
+#         print(i)
 
 
-# diseases = []
-# file_name = "dengue_julho.csv"
-# Util.list_read_file(diseases, file_name)
+diseases = []
+file_name = "dengue_julho.csv"
+Util.list_read_file(diseases, file_name)
 # Util.list_show(diseases)
+
+Util.correct_neighborhood_name(diseases, neighborhoods)
+Util.list_show(diseases)
