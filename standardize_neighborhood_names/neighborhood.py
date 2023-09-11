@@ -38,7 +38,11 @@ class Neighborhood:
             found = False
             for neighborhood in neighborhoods:                
                 for i in neighborhood.vector_line:                    
-                    if ((disease.neighborhood.upper() == i.upper()) or (disease.neighborhood.upper() in i.upper()) or (i.upper() in disease.neighborhood.upper())):
+                    if disease.neighborhood.upper() == "LOCALIDADE":
+                        found = True #to not parse the first line
+                        disease.neighborhood_corrected = "Localidade"
+                        break
+                    elif ((disease.neighborhood.upper() == i.upper()) or (disease.neighborhood.upper() in i.upper()) or (i.upper() in disease.neighborhood.upper())):
                         # print(disease.neighborhood.upper(), i.upper())
                         # os.system("pause")
                         disease.neighborhood_corrected = neighborhood.name.upper()
