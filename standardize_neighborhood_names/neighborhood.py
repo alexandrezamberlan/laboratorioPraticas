@@ -1,5 +1,3 @@
-import os
-
 class Neighborhood:
     def __init__(self, vector_line):
         self.vector_line = vector_line
