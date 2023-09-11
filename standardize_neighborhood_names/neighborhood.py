@@ -46,5 +46,5 @@ class Neighborhood:
                         break
             if (not found):
                 # print(disease.neighborhood.upper())
-                disease.neighborhood_corrected = '*** DESCONHECIDO ***'#input("Que bairro gostaria de cadastrar? ")                
+                disease.neighborhood_corrected = 'DESCONHECIDO'  #input("Que bairro gostaria de cadastrar? ")                
     
