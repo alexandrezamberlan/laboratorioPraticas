@@ -10,7 +10,7 @@ Neighborhood.list_read_file(neighborhoods)
 # Neighborhood.list_show(neighborhoods)
 
 diseases = []
-file_name = input('Informe nome do arquivo baixado da prefeitura no formato .csv: ') #"dengue_julho.csv"
+file_name = input('Enter the name of the file downloaded from the city hall in the format .csv: ') #"dengue_julho.csv"
 Disease.list_read_file(diseases, file_name)
 # Disease.list_show(diseases)
 
